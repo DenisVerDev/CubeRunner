@@ -7,28 +7,26 @@ public class RunManager : MonoBehaviour
 {
     public float runVelocity;
 
-    private GenerateObstacles generateObstacles;
-
     private GameObject currentObstacle;
+
+    private ObstacleGeneration obstacleGeneration;
+    private PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.generateObstacles = FindObjectOfType<GenerateObstacles>();
-        this.SpawnObstacle();
+        this.obstacleGeneration = FindObjectOfType<ObstacleGeneration>();
+        this.playerMovement = FindObjectOfType<PlayerMovement>();
+
+        this.playerMovement.PlayerVelocity = runVelocity*0.05f;
+
+        this.currentObstacle = this.obstacleGeneration.SpawnObstacle(runVelocity);
     }
 
     void Update()
     {
-        if (this.currentObstacle == null) this.SpawnObstacle();    
-    }
-
-    private void SpawnObstacle()
-    {
-        this.currentObstacle = this.generateObstacles.GenerateObstacle();
-
-        var obstacles = FindObjectsOfType<ObstacleMovement>().ToList();
-        obstacles.ForEach(x => x.ObstacleVelocity = runVelocity);
+        if (this.currentObstacle == null)
+            this.currentObstacle = this.obstacleGeneration.SpawnObstacle(runVelocity);
     }
 
     private void OnTriggerEnter(Collider other)
