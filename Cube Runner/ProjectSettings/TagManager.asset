@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - ObstacleGroup
+  - Undefined
   - PauseMenue
+  - WiningMenue
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class StageManager : MonoBehaviour
     public int NextStageThreshold { get; private set; } // how much score needed to reach the next stage
 
     public event EventHandler NextStage;
+    public event EventHandler Finished;
 
     //-------METHODS------------------
 
@@ -31,15 +32,16 @@ public class StageManager : MonoBehaviour
 
     void Update()
     {
-        if(CurrentStage < maxStages) // the last stage is the final one
+        if (CurrentStage < maxStages) // the last stage is the final one
         {
-            if(ScoreManager.PlayerScore >= NextStageThreshold)
+            if (ScoreManager.PlayerScore >= NextStageThreshold)
             {
                 SetStage(CurrentStage + 1);
                 UpdateUI();
                 NextStage(null, null);
             }
         }
+        else Finished(null, null);
     }
 
     void SetStage(int stage)

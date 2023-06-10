@@ -19,8 +19,5 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A)) playerRigidbody.AddForce(-PlayerVelocity, 0, 0, ForceMode.VelocityChange);
         else if (Input.GetKey(KeyCode.D)) playerRigidbody.AddForce(PlayerVelocity, 0, 0, ForceMode.VelocityChange);
-
-        if (transform.position.y < -1f)
-            this.enabled = false;
     }
 }

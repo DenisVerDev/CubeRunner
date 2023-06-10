@@ -13,7 +13,6 @@ public class PauseMenue : MonoBehaviour
         set
         {
             Time.timeScale = value ? 0 : 1;
-            pauseMenue.SetActive(value);
         }
     }
 
@@ -24,7 +23,11 @@ public class PauseMenue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) IsGamePaused = !IsGamePaused;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            IsGamePaused = !IsGamePaused;
+            pauseMenue.SetActive(IsGamePaused);
+        }
     }
 
     public void Restart() => SceneManager.LoadScene("PlaygroundScene");
