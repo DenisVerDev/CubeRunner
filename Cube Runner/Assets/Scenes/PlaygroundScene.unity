@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319781be530f109489dc5b5368ad3090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseRunVelocity: 800
+  baseRunVelocity: 1000
 --- !u!65 &1736893608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736893606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fdebe5125823e4dbfadcc4599d49bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStages: 4
+  maxStages: 10
   baseScoreThreshold: 500
   animState: NextStage
   stageText: {fileID: 600831061}
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959b5f86a7e14994f9d4c32c03364157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardPoints: 1
+  rewardPoints: 100
   scoreText: {fileID: 1972003084}
 --- !u!1 &1972003082
 GameObject:
