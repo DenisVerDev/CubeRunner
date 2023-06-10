@@ -15,38 +15,33 @@ public class RunManager : MonoBehaviour
 
     public float CurrentRunVelocity { get; set; }
 
-    private GameObject currentObstacle;
-
     //-----SCRIPTS------
-    private ObstacleGeneration obstacleGeneration;
     private PlayerMovement playerMovement;
+    private ObstacleManager obstacleManager;
     private StageManager stageManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        obstacleGeneration = FindObjectOfType<ObstacleGeneration>();
         playerMovement = FindObjectOfType<PlayerMovement>();
+        obstacleManager = FindObjectOfType<ObstacleManager>();
         stageManager = FindObjectOfType<StageManager>();
 
         stageManager.NextStage += StageManager_NextStage;
         stageManager.InitFirstStage();
 
         PlayerScore = 0;
-
-        currentObstacle = obstacleGeneration.SpawnObstacle(CurrentRunVelocity);
     }
 
     void Update()
     {
-        if (currentObstacle == null)
+        if (obstacleManager.CurrentObstacle == null)
         {
             // update score
             PlayerScore += rewardPoints;
             scoreText.text = PlayerScore.ToString();
 
-            // spawn next obstacle
-            currentObstacle = obstacleGeneration.SpawnObstacle(CurrentRunVelocity);
+            obstacleManager.SpawnObstacle(CurrentRunVelocity);
         }
     }
 
@@ -54,10 +49,5 @@ public class RunManager : MonoBehaviour
     {
         CurrentRunVelocity = stageManager.CurrentStage * baseRunVelocity;
         playerMovement.PlayerVelocity = CurrentRunVelocity * 0.05f;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Obstacle") Destroy(currentObstacle);
     }
 }
