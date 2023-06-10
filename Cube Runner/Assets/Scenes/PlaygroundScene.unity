@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 1736893608}
   - component: {fileID: 1736893607}
   - component: {fileID: 1736893612}
+  - component: {fileID: 1736893614}
   - component: {fileID: 1736893613}
   m_Layer: 0
   m_Name: AdminGround
@@ -802,9 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319781be530f109489dc5b5368ad3090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardPoints: 100
   baseRunVelocity: 800
-  scoreText: {fileID: 1972003084}
 --- !u!65 &1736893608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -912,6 +911,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be38460c58b09674fb45cabdea1eb759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1736893614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736893606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959b5f86a7e14994f9d4c32c03364157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardPoints: 1
+  scoreText: {fileID: 1972003084}
 --- !u!1 &1972003082
 GameObject:
   m_ObjectHideFlags: 0

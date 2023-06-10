@@ -33,7 +33,7 @@ public class StageManager : MonoBehaviour
     {
         if(CurrentStage < maxStages) // the last stage is the final one
         {
-            if(RunManager.PlayerScore >= NextStageThreshold)
+            if(ScoreManager.PlayerScore >= NextStageThreshold)
             {
                 SetStage(CurrentStage + 1);
                 UpdateUI();

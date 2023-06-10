@@ -1,17 +1,8 @@
-using TMPro;
 using UnityEngine;
 
 public class RunManager : MonoBehaviour
 {
-    //------FOR THE EDITOR----
-    public int rewardPoints;
-
     public float baseRunVelocity;
-
-    public TextMeshProUGUI scoreText;
-
-    //------VARIABLES----------
-    public static int PlayerScore { get; set; }
 
     public float CurrentRunVelocity { get; set; }
 
@@ -19,6 +10,7 @@ public class RunManager : MonoBehaviour
     private PlayerMovement playerMovement;
     private ObstacleManager obstacleManager;
     private StageManager stageManager;
+    private ScoreManager scoreManager;
 
     // Start is called before the first frame update
     void Start()
@@ -26,21 +18,19 @@ public class RunManager : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         obstacleManager = FindObjectOfType<ObstacleManager>();
         stageManager = FindObjectOfType<StageManager>();
+        scoreManager = FindObjectOfType<ScoreManager>();
 
         stageManager.NextStage += StageManager_NextStage;
         stageManager.InitFirstStage();
 
-        PlayerScore = 0;
+        obstacleManager.SpawnObstacle(CurrentRunVelocity); // to prevent score stonks at the begining
     }
 
     void Update()
     {
         if (obstacleManager.CurrentObstacle == null)
         {
-            // update score
-            PlayerScore += rewardPoints;
-            scoreText.text = PlayerScore.ToString();
-
+            scoreManager.IncreaseScore();
             obstacleManager.SpawnObstacle(CurrentRunVelocity);
         }
     }
