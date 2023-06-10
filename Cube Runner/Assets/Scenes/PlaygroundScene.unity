@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fdebe5125823e4dbfadcc4599d49bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStages: 10
+  maxStages: 8
   baseScoreThreshold: 500
   animState: NextStage
   stageText: {fileID: 600831061}
