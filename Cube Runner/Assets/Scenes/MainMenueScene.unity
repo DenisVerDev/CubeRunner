@@ -208,8 +208,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1062166326}
-        m_TargetAssemblyTypeName: MainMenue, Assembly-CSharp
-        m_MethodName: QuitTheGame
+        m_TargetAssemblyTypeName: GameQuit, Assembly-CSharp
+        m_MethodName: Leave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062166324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d998f3970e891624e94bea47d245da52, type: 3}
+  m_Script: {fileID: 11500000, guid: a84521f652bc9574d95327dd181576a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1140436700
@@ -1145,9 +1145,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1062166326}
-        m_TargetAssemblyTypeName: MainMenue, Assembly-CSharp
-        m_MethodName: StartRun
+      - m_Target: {fileID: 11400000, guid: fbeb43a4120758146a87b271090611aa, type: 2}
+        m_TargetAssemblyTypeName: SceneSO, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
