@@ -1290,9 +1290,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
-        m_MethodName: Leave
+      - m_Target: {fileID: 11400000, guid: ae5c9d16d7aac9842ad2330d2f3cd91a, type: 2}
+        m_TargetAssemblyTypeName: SceneSO, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1657,9 +1657,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 11400000, guid: fbeb43a4120758146a87b271090611aa, type: 2}
+        m_TargetAssemblyTypeName: SceneSO, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1934,6 +1934,7 @@ GameObject:
   - component: {fileID: 1736893614}
   - component: {fileID: 1736893613}
   - component: {fileID: 1736893615}
+  - component: {fileID: 1736893616}
   m_Layer: 0
   m_Name: AdminGround
   m_TagString: Untagged
@@ -2083,6 +2084,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenue: {fileID: 663057972}
   runPausedStatus: {fileID: 11400000, guid: d6551026f24ac5446b7368447e7095ee, type: 2}
+--- !u!114 &1736893616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736893606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff897c7f4489224ba5bd3dbbd014557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winningMenue: {fileID: 1758729282}
+  currentStage: {fileID: 11400000, guid: 99af1216d80170c42b70e0e615e40812, type: 2}
+  maxStages: {fileID: 11400000, guid: 159e7acf600b9dd408eb94adfa49c9c3, type: 2}
 --- !u!1 &1758729282
 GameObject:
   m_ObjectHideFlags: 0
