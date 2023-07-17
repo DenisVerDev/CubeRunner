@@ -1914,6 +1914,7 @@ GameObject:
   - component: {fileID: 1736893610}
   - component: {fileID: 1736893609}
   - component: {fileID: 1736893608}
+  - component: {fileID: 1736893612}
   m_Layer: 0
   m_Name: AdminGround
   m_TagString: Untagged
@@ -1999,6 +2000,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736893612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736893606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b611f5f3def65f4c9b96f015383f0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentObstacle: {fileID: 11400000, guid: 518f085a824af60479f4adc6ba42088b, type: 2}
+  obstacleTag: {fileID: 11400000, guid: 62064511c5e39cc438b3cf35b4d270ba, type: 2}
+  obstacleDeathEvent: {fileID: 11400000, guid: f6dd2b4b9913647498dddcd2eae8cdf1, type: 2}
 --- !u!1 &1758729282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2358,7 @@ GameObject:
   - component: {fileID: 1976873253}
   - component: {fileID: 1976873252}
   - component: {fileID: 1976873251}
+  - component: {fileID: 1976873255}
   m_Layer: 0
   m_Name: ObstacleGround
   m_TagString: Untagged
@@ -2427,6 +2444,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1976873255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976873250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93109652b943b24cb038670882f7690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabObstacles: {fileID: 11400000, guid: ad13624bbe8fd15449b3f425728c2f3c, type: 2}
+  currentObstacle: {fileID: 11400000, guid: 518f085a824af60479f4adc6ba42088b, type: 2}
 --- !u!1 &2024937214
 GameObject:
   m_ObjectHideFlags: 0

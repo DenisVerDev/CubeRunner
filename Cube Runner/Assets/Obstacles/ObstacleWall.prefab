@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 431489778450018531}
   - component: {fileID: 431489778450018556}
   - component: {fileID: 431489778450018557}
-  - component: {fileID: 2324543104032947906}
+  - component: {fileID: -4530653255134887632}
   m_Layer: 0
   m_Name: ObstacleWall
   m_TagString: Obstacle
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &2324543104032947906
+--- !u!114 &-4530653255134887632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a187b0348f45caf4eab8af33a2f1d1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleRigidbody: {fileID: 431489778450018557}
+  currentRunVelocity: {fileID: 11400000, guid: 2a274c7c2410dd443bae9bd90d7a9d87, type: 2}
