@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215291333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -345,8 +345,6 @@ GameObject:
   - component: {fileID: 215291331}
   - component: {fileID: 215291330}
   - component: {fileID: 215291329}
-  - component: {fileID: 215291333}
-  - component: {fileID: 215291334}
   m_Layer: 0
   m_Name: PlayerGround
   m_TagString: Untagged
@@ -432,33 +430,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215291333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215291328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69feb6d7a3c268b498e257822dd8d92c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenue: {fileID: 663057972}
---- !u!114 &215291334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215291328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ac4aaec66705a41aa6ae34e8c837c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winingMenue: {fileID: 1758729282}
-  pauseMenue: {fileID: 215291333}
 --- !u!1 &257232815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215291333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
         m_MethodName: Leave
         m_Mode: 1
@@ -1437,7 +1408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215291333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
         m_MethodName: Leave
         m_Mode: 1
@@ -1670,7 +1641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215291333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenue, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -1943,10 +1914,6 @@ GameObject:
   - component: {fileID: 1736893610}
   - component: {fileID: 1736893609}
   - component: {fileID: 1736893608}
-  - component: {fileID: 1736893607}
-  - component: {fileID: 1736893612}
-  - component: {fileID: 1736893614}
-  - component: {fileID: 1736893613}
   m_Layer: 0
   m_Name: AdminGround
   m_TagString: Untagged
@@ -1954,19 +1921,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1736893607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736893606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319781be530f109489dc5b5368ad3090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseRunVelocity: 600
 --- !u!65 &1736893608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2045,49 +1999,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1736893612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736893606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71fdebe5125823e4dbfadcc4599d49bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxStages: 6
-  baseScoreThreshold: 500
-  animState: NextStage
-  stageText: {fileID: 600831061}
-  stageAnimator: {fileID: 600831063}
---- !u!114 &1736893613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736893606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be38460c58b09674fb45cabdea1eb759, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1736893614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736893606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 959b5f86a7e14994f9d4c32c03364157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rewardPoints: 100
-  scoreText: {fileID: 1972003084}
 --- !u!1 &1758729282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,7 +2342,6 @@ GameObject:
   - component: {fileID: 1976873253}
   - component: {fileID: 1976873252}
   - component: {fileID: 1976873251}
-  - component: {fileID: 1976873255}
   m_Layer: 0
   m_Name: ObstacleGround
   m_TagString: Untagged
@@ -2517,26 +2427,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1976873255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976873250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3c9b0cc50f51e41a2a481acae2df91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab_obstacles:
-  - {fileID: 7098353503015957148, guid: d195cdc96035c7b478eeaadb1f7873cf, type: 3}
-  - {fileID: 9107162821065797422, guid: 09a384c8f1afa474bb2b0649f7280a43, type: 3}
-  - {fileID: 2693570930049902536, guid: f50c93d2e17bdc54fb3fda75c8344247, type: 3}
-  - {fileID: 431489778450018558, guid: 2894092e873cd7246a7bf2bb5abbb954, type: 3}
-  - {fileID: 5345935089823228464, guid: 3b75d435a8a51254fa1e1f19892f5862, type: 3}
-  - {fileID: 4740963453379868360, guid: 5077e9b6b131ee648ada4bfb8505939d, type: 3}
-  - {fileID: 1481687109703660601, guid: 6ee8f3c7a2f57d647a1e35ba1de08fe3, type: 3}
 --- !u!1 &2024937214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2509,6 @@ GameObject:
   - component: {fileID: 2052709973}
   - component: {fileID: 2052709972}
   - component: {fileID: 2052709977}
-  - component: {fileID: 2052709978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2733,19 +2622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5058c537ce6875b40ae81bb8eabdd9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 2052709972}
---- !u!114 &2052709978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052709971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e640e1b6f43de449848e488fa947cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  moveCoefficient: 0.05
+  currentRunVelocity: {fileID: 11400000, guid: 2a274c7c2410dd443bae9bd90d7a9d87, type: 2}
 --- !u!1 &2109309650
 GameObject:
   m_ObjectHideFlags: 0
