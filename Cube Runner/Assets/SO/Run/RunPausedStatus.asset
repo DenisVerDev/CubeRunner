@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 730d64d38b5057741a8f2b7d41077b48, type: 3}
-  m_Name: PlaygroundScene
+  m_Script: {fileID: 11500000, guid: 93bebf62e5ad9b2488fd7a4acfba1661, type: 3}
+  m_Name: RunPausedStatus
   m_EditorClassIdentifier: 
-  sceneName: PlaygroundScene
+  value: 0
