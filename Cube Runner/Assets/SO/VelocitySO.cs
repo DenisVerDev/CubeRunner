@@ -9,5 +9,6 @@ public class VelocitySO : ScriptableObject
         set { velocity = value < 0 ? 0 : value; }
     }
 
+    [SerializeField]
     private float velocity;
 }
