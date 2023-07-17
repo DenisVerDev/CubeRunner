@@ -11,12 +11,15 @@ public class ObstacleDeath : MonoBehaviour
     [SerializeField]
     private FlagSO obstacleDeathEvent;
 
+    [SerializeField]
+    private FlagSO playerDeathEvent;
+
 #if UNITY_EDITOR
     private void Start() => obstacleDeathEvent.value = false;
 #endif
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(obstacleTag.tag))
+        if(other.CompareTag(obstacleTag.tag) && !playerDeathEvent.value)
         {
             Destroy(currentObstacle.gameObject);
             obstacleDeathEvent.value = true;
