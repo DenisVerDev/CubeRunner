@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class UIStage : MonoBehaviour
 {
-    public string animState;
+    [SerializeField]
+    private string animState;
 
     [SerializeField]
-    private Int32SO currentStage;
+    private DynamicInt32SO currentStage;
 
     [SerializeField]
-    private FlagSO uiStageUpdateEvent;
+    private DynamicFlagSO uiStageUpdateEvent;
 
     private Animator animator;
 
@@ -20,25 +21,23 @@ public class UIStage : MonoBehaviour
         animator = GetComponent<Animator>();
         stageText = GetComponent<TMP_Text>();
 
-        uiStageUpdateEvent.value = false;
-
         UpdateStageText();
     }
 
     void LateUpdate()
     {
-        if(uiStageUpdateEvent.value)
+        if(uiStageUpdateEvent.Value)
         {
             UpdateStageText();
             PlayAnimation();
 
-            uiStageUpdateEvent.value = false;
+            uiStageUpdateEvent.Value = false;
         }
     }
 
     void UpdateStageText()
     {
-        string stage_suffix = currentStage.value switch
+        string stage_suffix = currentStage.Value switch
         {
             1=>"st",
             2=>"nd",
@@ -46,7 +45,7 @@ public class UIStage : MonoBehaviour
             _=>"th"
         };
 
-        stageText.text = $"{currentStage.value}{stage_suffix} Stage";
+        stageText.text = $"{currentStage.Value}{stage_suffix} Stage";
     }
 
     void PlayAnimation()

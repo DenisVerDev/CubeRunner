@@ -3,7 +3,7 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     [SerializeField]
-    private VelocitySO currentRunVelocity;
+    private DynamicVelocitySO runVelocity;
 
     private new Rigidbody rigidbody;
 
@@ -14,6 +14,6 @@ public class ObstacleMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody.AddForce(0, 0, -currentRunVelocity.Value, ForceMode.Force);
+        rigidbody.AddForce(0, 0, -runVelocity.Value, ForceMode.Force);
     }
 }

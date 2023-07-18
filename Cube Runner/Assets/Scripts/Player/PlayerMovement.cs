@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveCoefficient;
 
     [SerializeField]
-    private VelocitySO currentRunVelocity;
+    private DynamicVelocitySO runVelocity;
 
     private new Rigidbody rigidbody;
 
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A)) rigidbody.AddForce(-currentRunVelocity.Value * moveCoefficient, 0, 0, ForceMode.VelocityChange);
-        else if (Input.GetKey(KeyCode.D)) rigidbody.AddForce(currentRunVelocity.Value * moveCoefficient, 0, 0, ForceMode.VelocityChange);
+        if (Input.GetKey(KeyCode.A)) rigidbody.AddForce(-runVelocity.Value * moveCoefficient, 0, 0, ForceMode.VelocityChange);
+        else if (Input.GetKey(KeyCode.D)) rigidbody.AddForce(runVelocity.Value * moveCoefficient, 0, 0, ForceMode.VelocityChange);
     }
 }

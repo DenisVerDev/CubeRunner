@@ -1935,6 +1935,7 @@ GameObject:
   - component: {fileID: 1736893613}
   - component: {fileID: 1736893615}
   - component: {fileID: 1736893616}
+  - component: {fileID: 1736893617}
   m_Layer: 0
   m_Name: AdminGround
   m_TagString: Untagged
@@ -2049,10 +2050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStage: {fileID: 11400000, guid: 99af1216d80170c42b70e0e615e40812, type: 2}
-  nextScoreThreshold: {fileID: 11400000, guid: e095db2f86d6a2048aa1165d13105b8c, type: 2}
-  baseScoreThreshold: {fileID: 11400000, guid: 292cf71770691464cb7fc611ec1c55aa, type: 2}
-  currentRunVelocity: {fileID: 11400000, guid: 2a274c7c2410dd443bae9bd90d7a9d87, type: 2}
-  baseRunVelocity: {fileID: 11400000, guid: 0dd1c4c789917184784cfc3489f0832d, type: 2}
+  scoreThreshold: {fileID: 11400000, guid: c690de154f1cac141a3f05a09586eadb, type: 2}
+  runVelocity: {fileID: 11400000, guid: 6766864397f18dc4cb63136b31bcb12b, type: 2}
   stageChangeEvent: {fileID: 11400000, guid: 911001f8a0fcd034ab9288580c900c16, type: 2}
   uiStageUpdateEvent: {fileID: 11400000, guid: 49c1f40ef039dfa4e8c88c5014f885c7, type: 2}
 --- !u!114 &1736893614
@@ -2068,7 +2067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: {fileID: 11400000, guid: 9b83e6b9f4b636c4a8921619d0744705, type: 2}
-  nextScoreThreshold: {fileID: 11400000, guid: e095db2f86d6a2048aa1165d13105b8c, type: 2}
+  scoreThreshold: {fileID: 11400000, guid: c690de154f1cac141a3f05a09586eadb, type: 2}
   stageChangeEvent: {fileID: 11400000, guid: 911001f8a0fcd034ab9288580c900c16, type: 2}
 --- !u!114 &1736893615
 MonoBehaviour:
@@ -2099,6 +2098,31 @@ MonoBehaviour:
   winningMenue: {fileID: 1758729282}
   currentStage: {fileID: 11400000, guid: 99af1216d80170c42b70e0e615e40812, type: 2}
   maxStages: {fileID: 11400000, guid: 159e7acf600b9dd408eb94adfa49c9c3, type: 2}
+--- !u!114 &1736893617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736893606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e095765c27f4a4fbaae42f846e9f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamicFlags:
+  - {fileID: 11400000, guid: f6dd2b4b9913647498dddcd2eae8cdf1, type: 2}
+  - {fileID: 11400000, guid: b452c642a0f36144ab284fa17ce651c0, type: 2}
+  - {fileID: 11400000, guid: d6551026f24ac5446b7368447e7095ee, type: 2}
+  - {fileID: 11400000, guid: 911001f8a0fcd034ab9288580c900c16, type: 2}
+  - {fileID: 11400000, guid: 1ff71f5702c6dbb4eb9b0cf04a32add2, type: 2}
+  - {fileID: 11400000, guid: 49c1f40ef039dfa4e8c88c5014f885c7, type: 2}
+  dynamicInt32s:
+  - {fileID: 11400000, guid: 99af1216d80170c42b70e0e615e40812, type: 2}
+  - {fileID: 11400000, guid: 9b83e6b9f4b636c4a8921619d0744705, type: 2}
+  - {fileID: 11400000, guid: c690de154f1cac141a3f05a09586eadb, type: 2}
+  dynamicVelocities:
+  - {fileID: 11400000, guid: 6766864397f18dc4cb63136b31bcb12b, type: 2}
 --- !u!1 &1758729282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,7 +2780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveCoefficient: 0.05
-  currentRunVelocity: {fileID: 11400000, guid: 2a274c7c2410dd443bae9bd90d7a9d87, type: 2}
+  runVelocity: {fileID: 11400000, guid: 6766864397f18dc4cb63136b31bcb12b, type: 2}
 --- !u!114 &2052709978
 MonoBehaviour:
   m_ObjectHideFlags: 0

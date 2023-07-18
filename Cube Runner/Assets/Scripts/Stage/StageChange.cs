@@ -3,44 +3,30 @@ using UnityEngine;
 public class StageChange : MonoBehaviour
 {
     [SerializeField]
-    private Int32SO currentStage;
+    private DynamicInt32SO currentStage;
 
     [SerializeField]
-    private Int32SO nextScoreThreshold;
+    private DynamicInt32SO scoreThreshold;
 
     [SerializeField]
-    private Int32SO baseScoreThreshold;
+    private DynamicVelocitySO runVelocity;
 
     [SerializeField]
-    private VelocitySO currentRunVelocity;
+    private DynamicFlagSO stageChangeEvent;
 
     [SerializeField]
-    private Int32SO baseRunVelocity;
+    private DynamicFlagSO uiStageUpdateEvent;
 
-    [SerializeField]
-    private FlagSO stageChangeEvent;
-
-    [SerializeField]
-    private FlagSO uiStageUpdateEvent;
-
-#if UNITY_EDITOR
-    void Awake()
-    {
-        currentStage.value = 1;
-        nextScoreThreshold.value = baseScoreThreshold.value;
-        currentRunVelocity.Value = baseRunVelocity.value;
-    }
-#endif
     void Update()
     {
-        if(stageChangeEvent.value)
+        if(stageChangeEvent.Value)
         {
-            currentStage.value++;
-            nextScoreThreshold.value += currentStage.value * baseScoreThreshold.value;
-            currentRunVelocity.Value = currentStage.value * baseRunVelocity.value;
+            currentStage.Value++;
+            scoreThreshold.Value += currentStage.Value * scoreThreshold.BaseValue;
+            runVelocity.Value = currentStage.Value * runVelocity.BaseValue;
 
-            uiStageUpdateEvent.value = true;
-            stageChangeEvent.value = false;
+            uiStageUpdateEvent.Value = true;
+            stageChangeEvent.Value = false;
         }
     }
 }

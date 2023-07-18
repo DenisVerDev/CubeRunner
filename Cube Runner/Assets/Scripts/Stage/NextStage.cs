@@ -3,20 +3,17 @@ using UnityEngine;
 public class NextStage : MonoBehaviour
 {
     [SerializeField]
-    private Int32SO playerScore;
+    private DynamicInt32SO playerScore;
 
     [SerializeField]
-    private Int32SO nextScoreThreshold;
+    private DynamicInt32SO scoreThreshold;
 
     [SerializeField]
-    private FlagSO stageChangeEvent;
+    private DynamicFlagSO stageChangeEvent;
 
-#if UNITY_EDITOR
-    void Start() => stageChangeEvent.value = false;
-#endif
     void Update()
     {
-        if(playerScore.value >= nextScoreThreshold.value)
-            stageChangeEvent.value = true;
+        if(playerScore.Value >= scoreThreshold.Value)
+            stageChangeEvent.Value = true;
     }
 }

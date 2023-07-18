@@ -3,31 +3,28 @@ using UnityEngine;
 public class PlayerScore : MonoBehaviour
 {
     [SerializeField]
-    private Int32SO playerScore;
+    private DynamicInt32SO playerScore;
 
     [SerializeField]
     private Int32SO rewardScore;
 
     [SerializeField]
-    private FlagSO playerDeathEvent;
+    private DynamicFlagSO playerDeathEvent;
 
     [SerializeField]
-    private FlagSO obstacleDeathEvent;
+    private DynamicFlagSO obstacleDeathEvent;
 
     [SerializeField]
-    private FlagSO uiScoreUpdateEvent;
+    private DynamicFlagSO uiScoreUpdateEvent;
 
-#if UNITY_EDITOR
-    void Start() => playerScore.value = 0;
-#endif
     void LateUpdate()
     {
-        if (!playerDeathEvent.value && obstacleDeathEvent.value)
+        if (!playerDeathEvent.Value && obstacleDeathEvent.Value)
         {
-            playerScore.value += rewardScore.value;
+            playerScore.Value += rewardScore.Value;
 
-            uiScoreUpdateEvent.value = true;
-            obstacleDeathEvent.value = false;
+            uiScoreUpdateEvent.Value = true;
+            obstacleDeathEvent.Value = false;
         }
     }
 }

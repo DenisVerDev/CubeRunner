@@ -2,20 +2,18 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public float restartDelay;
+    [SerializeField]
+    private float restartDelay;
 
     [SerializeField]
-    private FlagSO playerDeathEvent;
+    private DynamicFlagSO playerDeathEvent;
 
     [SerializeField]
     private SceneSO restartScene;
 
-#if UNITY_EDITOR
-    void Start() => playerDeathEvent.value = false;
-#endif
     void LateUpdate()
     {
-        if (playerDeathEvent.value)
+        if (playerDeathEvent.Value)
             Invoke(nameof(RestartPlayground), restartDelay);
     }
 

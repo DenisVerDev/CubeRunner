@@ -9,20 +9,17 @@ public class ObstacleDeath : MonoBehaviour
     private TagSO obstacleTag;
 
     [SerializeField]
-    private FlagSO obstacleDeathEvent;
+    private DynamicFlagSO obstacleDeathEvent;
 
     [SerializeField]
-    private FlagSO playerDeathEvent;
+    private DynamicFlagSO playerDeathEvent;
 
-#if UNITY_EDITOR
-    private void Start() => obstacleDeathEvent.value = false;
-#endif
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(obstacleTag.tag) && !playerDeathEvent.value)
+        if(other.CompareTag(obstacleTag.tag) && !playerDeathEvent.Value)
         {
             Destroy(currentObstacle.gameObject);
-            obstacleDeathEvent.value = true;
+            obstacleDeathEvent.Value = true;
         }
     }
 }

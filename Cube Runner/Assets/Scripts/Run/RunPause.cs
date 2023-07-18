@@ -2,25 +2,22 @@ using UnityEngine;
 
 public class RunPause : MonoBehaviour
 {
-    public GameObject pauseMenue;
+    [SerializeField]
+    private GameObject pauseMenue;
 
     [SerializeField]
-    private FlagSO runPausedStatus;
+    private DynamicFlagSO runPausedStatus;
 
-    void Start()
-    {
-        runPausedStatus.value = false;
-        Time.timeScale = 1f;
-    }
+    void Start() => Time.timeScale = 1f;
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            runPausedStatus.value = !runPausedStatus.value;
-            pauseMenue.SetActive(runPausedStatus.value);
+            runPausedStatus.Value = !runPausedStatus.Value;
+            pauseMenue.SetActive(runPausedStatus.Value);
 
-            Time.timeScale = runPausedStatus.value ? 0 : 1;
+            Time.timeScale = runPausedStatus.Value ? 0 : 1;
         }
     }
 }

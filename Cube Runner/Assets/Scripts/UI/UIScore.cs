@@ -4,25 +4,24 @@ using UnityEngine;
 public class UIScore : MonoBehaviour
 {
     [SerializeField]
-    private Int32SO playerScore;
+    private DynamicInt32SO playerScore;
 
     [SerializeField]
-    private FlagSO uiScoreUpdateEvent;
+    private DynamicFlagSO uiScoreUpdateEvent;
 
     private TMP_Text scoreText;
 
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        uiScoreUpdateEvent.value = true;
     }
 
     void LateUpdate()
     {
-        if(uiScoreUpdateEvent.value)
+        if(uiScoreUpdateEvent.Value)
         {
-            scoreText.text = playerScore.value.ToString();
-            uiScoreUpdateEvent.value = false;
+            scoreText.text = playerScore.Value.ToString();
+            uiScoreUpdateEvent.Value = false;
         }
     }
 }

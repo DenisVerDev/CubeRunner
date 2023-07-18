@@ -8,9 +8,8 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField]
     private GameObjectSO currentObstacle;
 
-#if UNITY_EDITOR
     private void Start() => currentObstacle.gameObject = null;
-#endif
+
     void Update()
     {
         if(currentObstacle.gameObject == null)

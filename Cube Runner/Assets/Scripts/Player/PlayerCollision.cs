@@ -6,17 +6,17 @@ public class PlayerCollision : MonoBehaviour
     private TagSO obstacleTag;
 
     [SerializeField]
-    private FlagSO playerDeathEvent;
+    private DynamicFlagSO playerDeathEvent;
 
     private void FixedUpdate()
     {
         if (transform.position.y < -1f)
-            playerDeathEvent.value = true;
+            playerDeathEvent.Value = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(obstacleTag.tag))
-            playerDeathEvent.value = true;
+            playerDeathEvent.Value = true;
     }
 }
