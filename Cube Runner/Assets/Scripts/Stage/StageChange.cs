@@ -20,8 +20,11 @@ public class StageChange : MonoBehaviour
     [SerializeField]
     private FlagSO stageChangeEvent;
 
+    [SerializeField]
+    private FlagSO uiStageUpdateEvent;
+
 #if UNITY_EDITOR
-    void Start()
+    void Awake()
     {
         currentStage.value = 1;
         nextScoreThreshold.value = baseScoreThreshold.value;
@@ -36,6 +39,7 @@ public class StageChange : MonoBehaviour
             nextScoreThreshold.value += currentStage.value * baseScoreThreshold.value;
             currentRunVelocity.Value = currentStage.value * baseRunVelocity.value;
 
+            uiStageUpdateEvent.value = true;
             stageChangeEvent.value = false;
         }
     }

@@ -11,22 +11,12 @@ public class NextStage : MonoBehaviour
     [SerializeField]
     private FlagSO stageChangeEvent;
 
-    [SerializeField]
-    private FlagSO stageChangeAnimation;
-
 #if UNITY_EDITOR
-    void Start()
-    {
-        stageChangeEvent.value = false;
-        stageChangeAnimation.value = false;
-    }
+    void Start() => stageChangeEvent.value = false;
 #endif
     void Update()
     {
         if(playerScore.value >= nextScoreThreshold.value)
-        {
             stageChangeEvent.value = true;
-            stageChangeAnimation.value = true;
-        }
     }
 }

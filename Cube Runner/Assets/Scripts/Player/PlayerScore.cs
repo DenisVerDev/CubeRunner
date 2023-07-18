@@ -14,6 +14,9 @@ public class PlayerScore : MonoBehaviour
     [SerializeField]
     private FlagSO obstacleDeathEvent;
 
+    [SerializeField]
+    private FlagSO uiScoreUpdateEvent;
+
 #if UNITY_EDITOR
     void Start() => playerScore.value = 0;
 #endif
@@ -22,6 +25,8 @@ public class PlayerScore : MonoBehaviour
         if (!playerDeathEvent.value && obstacleDeathEvent.value)
         {
             playerScore.value += rewardScore.value;
+
+            uiScoreUpdateEvent.value = true;
             obstacleDeathEvent.value = false;
         }
     }

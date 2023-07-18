@@ -6,8 +6,23 @@ public class UIScore : MonoBehaviour
     [SerializeField]
     private Int32SO playerScore;
 
+    [SerializeField]
+    private FlagSO uiScoreUpdateEvent;
+
     private TMP_Text scoreText;
 
-    void Start() => scoreText = GetComponent<TMP_Text>();
-    void LateUpdate() => scoreText.text = playerScore.value.ToString();
+    void Start()
+    {
+        scoreText = GetComponent<TMP_Text>();
+        uiScoreUpdateEvent.value = true;
+    }
+
+    void LateUpdate()
+    {
+        if(uiScoreUpdateEvent.value)
+        {
+            scoreText.text = playerScore.value.ToString();
+            uiScoreUpdateEvent.value = false;
+        }
+    }
 }

@@ -9,7 +9,7 @@ public class UIStage : MonoBehaviour
     private Int32SO currentStage;
 
     [SerializeField]
-    private FlagSO stageChangeAnimation;
+    private FlagSO uiStageUpdateEvent;
 
     private Animator animator;
 
@@ -19,14 +19,21 @@ public class UIStage : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         stageText = GetComponent<TMP_Text>();
+
+        uiStageUpdateEvent.value = false;
+
+        UpdateStageText();
     }
 
     void LateUpdate()
     {
-        UpdateStageText();
-
-        if(stageChangeAnimation.value)
+        if(uiStageUpdateEvent.value)
+        {
+            UpdateStageText();
             PlayAnimation();
+
+            uiStageUpdateEvent.value = false;
+        }
     }
 
     void UpdateStageText()
@@ -46,7 +53,5 @@ public class UIStage : MonoBehaviour
     {
         animator.enabled = true;
         animator.Play(animState, -1, 0f);
-
-        stageChangeAnimation.value = false;
     }
 }
